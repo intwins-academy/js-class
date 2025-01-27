@@ -1,0 +1,1 @@
+# IntWins Academy - JavaScript Class
