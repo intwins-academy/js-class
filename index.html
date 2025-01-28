@@ -8,106 +8,156 @@
       p.first {
         color: red;
       }
+
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+      td {
+        padding: 20px;
+      }
     </style>
-    <h1>Class 03</h1>
+    <!-- <h1>Class 03</h1>
     <p class="first">This is a paragraph</p>
-    <p class="second">This is <b>second</b> paragraph</p>
+    <p class="second">This is <b>second</b> paragraph</p> -->
+    <h1>Class 04</h1>
+    <h2>Students Results</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--  <tr>
+          <td>1</td>
+          <td>Rofique</td>
+          <td>850</td>
+          <td>B</td>
+        </tr> -->
+      </tbody>
+    </table>
     <script>
-      //   const h1 = document.querySelector("h1");
-      //   const p1 = document.querySelector("p");
-      //   const p2 = document.querySelector("p.second");
+      // Loop
 
-      //   const text = prompt("Write something...");
+      // for, while
 
-      //   console.log(text);
+      // initializer; condition; increment/decrement
 
-      //   p1.innerHTML = "This is a <b>paragraph</b>";
+      /*       let age = 10;
 
-      //   h1.innerHTML = text;
-      //   console.log(h1.innerHTML);
-      //   console.log(p1.innerHTML);
-      //   console.log(p2.innerHTML);
+      age = 13;
+      console.log(age); */
 
-      // Array
-      // Object
-      //   const rollNo1 = 1;
-      //   const name1 = "Rofique";
-      //   const marks1 = 850;
+      // const => constant
 
-      //   console.log(rollNo1);
+      // const/let
 
-      //   const rollNo2 = 2;
-      // {
-      //    name : value
+      // Even number from 1-20
+      // Odd number from 1-20
+
+      // 2, 4, 6, 8, 10
+      // Divisible by 5
+
+      // 5, 10, 15, 20, 25
+      // 0, 1, 2, 3, 4
+      // const students = [
+      //   "Rofique",
+      //   "Shofique",
+      //   "Rony",
+      //   "Tony",
+      //   "Putin",
+      //   "Trump",
+      //   "Macron",
+      // ];
+
+      // console.log(students.length);
+
+      // for (let a = 0; a < students.length; a = a + 1) {
+      //   console.log(students[a]);
       // }
 
-      const name = "JavaScript";
-      const age = 10;
-      const address = "Dhaka, Bangladesh";
+      const students = [
+        {
+          rollNo: 1,
+          name: "Rofique",
+          marks: 850,
+        },
+        {
+          rollNo: 2,
+          name: "Shofique",
+          marks: 350,
+        },
+        {
+          rollNo: 3,
+          name: "Tony",
+          marks: 950,
+        },
+        {
+          rollNo: 4,
+          name: "Rony",
+          marks: 650,
+        },
+        {
+          rollNo: 5,
+          name: "Jony",
+          marks: 250,
+        },
+        {
+          rollNo: 6,
+          name: "Trump",
+          marks: 500,
+        },
+      ];
 
-      console.log(name);
+      const names = ["A", "B", "C"];
 
-      const language = {
-        name: "JavaScript",
-        age: 10,
-        address: "Dhaka, Bangladesh",
-      };
+      // console.log(names[1]);
 
-      console.log(language.age);
+      // String Interpolation
 
-      // Naming rules
-      // Convention
+      // console.log(`Hello, ${2 - 2}. How are you?`);
 
-      // Variable naming convention
-      // Snake Case
-      // Camel Case
-      // Pascel Case
+      const tableBody = document.querySelector("tbody");
 
-      //   const firstName = "";
-      //   const lastName = "";
+      function calculateGrade(marks) {
+        if (marks >= 500) {
+          return "A+";
+        } else {
+          return "F";
+        }
+      }
 
-      //   const homeaddress
-      //   const OfficeAddressForAgency = "";
+      students.forEach(function (item) {
+        tableBody.innerHTML =
+          tableBody.innerHTML +
+          `
+      <tr>
+        <td>${item.rollNo}</td>
+        <td>${item.name}</td>
+        <td>${item.marks}</td>
+        <td>${calculateGrade(item.marks)}</td>
+      </tr>
+      `;
+      });
 
-      //   const student1 = {
-      //     rollNo: 1,
-      //     name: "Rofique",
-      //     marks: 850,
-      //   };
-
-      //   const student2 = {
-      //     rollNo: 2,
-      //     name: "Shofique",
-      //     marks: 350,
-      //   };
-
-      //   console.log(student1);
-      //   console.log(student2.name);
-
-      // Array
-      //   1,2,3,4,5,6
-      //   const name1 = "Rofique";
-      //   const name2 = "Shofique";
-      //   const name3 = "Tony";
-      //   const name4 = "Rony";
-      //   const name5 = "Jony";
-
-      //        Index    0          1         2       3       4
-      const rollNos = [1, 2, 3, 4, 5];
-      const names = ["Rofique", "Shofique", "Tony", "Rony", "Jony"];
-      const marks = [850, 350, 950, 650, 250];
-
-      // Indexing
-
-      // Brackek notation
-
-      //   variable_name[1]
-
-      console.log(rollNos);
-      console.log(names);
-      console.log(marks);
-
-      // Property : Value
+      // for (let index = 1; index <= students.length; index = index + 1) {
+      //   tableBody.innerHTML =
+      //     tableBody.innerHTML +
+      //     `
+      // <tr>
+      //   <td>${students[index].rollNo}</td>
+      //   <td>${students[index].name}</td>
+      //   <td>${students[index].marks}</td>
+      //   <td>${calculateGrade(students[index].marks)}</td>
+      // </tr>
+      // `;
+      // }
     </script>
   </body>
 </html>
