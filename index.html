@@ -1,28 +1,17 @@
 <html>
-  <head> </head>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
   <body>
-    <style>
-      h1 {
-        color: blue;
-      }
-      p.first {
-        color: red;
-      }
-
-      table,
-      td,
-      th {
-        border: 1px solid black;
-      }
-      td {
-        padding: 20px;
-      }
-    </style>
     <!-- <h1>Class 03</h1>
     <p class="first">This is a paragraph</p>
     <p class="second">This is <b>second</b> paragraph</p> -->
     <h1>Class 04</h1>
-    <h2>Students Results</h2>
+    <div class="flex">
+      <h2>Students Results</h2>
+      <button onclick="addResult()">Add Result</button>
+    </div>
 
     <table>
       <thead>
@@ -42,122 +31,5 @@
         </tr> -->
       </tbody>
     </table>
-    <script>
-      // Loop
-
-      // for, while
-
-      // initializer; condition; increment/decrement
-
-      /*       let age = 10;
-
-      age = 13;
-      console.log(age); */
-
-      // const => constant
-
-      // const/let
-
-      // Even number from 1-20
-      // Odd number from 1-20
-
-      // 2, 4, 6, 8, 10
-      // Divisible by 5
-
-      // 5, 10, 15, 20, 25
-      // 0, 1, 2, 3, 4
-      // const students = [
-      //   "Rofique",
-      //   "Shofique",
-      //   "Rony",
-      //   "Tony",
-      //   "Putin",
-      //   "Trump",
-      //   "Macron",
-      // ];
-
-      // console.log(students.length);
-
-      // for (let a = 0; a < students.length; a = a + 1) {
-      //   console.log(students[a]);
-      // }
-
-      const students = [
-        {
-          rollNo: 1,
-          name: "Rofique",
-          marks: 850,
-        },
-        {
-          rollNo: 2,
-          name: "Shofique",
-          marks: 350,
-        },
-        {
-          rollNo: 3,
-          name: "Tony",
-          marks: 950,
-        },
-        {
-          rollNo: 4,
-          name: "Rony",
-          marks: 650,
-        },
-        {
-          rollNo: 5,
-          name: "Jony",
-          marks: 250,
-        },
-        {
-          rollNo: 6,
-          name: "Trump",
-          marks: 500,
-        },
-      ];
-
-      const names = ["A", "B", "C"];
-
-      // console.log(names[1]);
-
-      // String Interpolation
-
-      // console.log(`Hello, ${2 - 2}. How are you?`);
-
-      const tableBody = document.querySelector("tbody");
-
-      function calculateGrade(marks) {
-        if (marks >= 500) {
-          return "A+";
-        } else {
-          return "F";
-        }
-      }
-
-      students.forEach(function (item) {
-        tableBody.innerHTML =
-          tableBody.innerHTML +
-          `
-      <tr>
-        <td>${item.rollNo}</td>
-        <td>${item.name}</td>
-        <td>${item.marks}</td>
-        <td>${calculateGrade(item.marks)}</td>
-      </tr>
-      `;
-      });
-
-      // for (let index = 1; index <= students.length; index = index + 1) {
-      //   tableBody.innerHTML =
-      //     tableBody.innerHTML +
-      //     `
-      // <tr>
-      //   <td>${students[index].rollNo}</td>
-      //   <td>${students[index].name}</td>
-      //   <td>${students[index].marks}</td>
-      //   <td>${calculateGrade(students[index].marks)}</td>
-      // </tr>
-      // `;
-      // }
-    </script>
   </body>
 </html>
