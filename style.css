@@ -1,0 +1,17 @@
+h1 {
+  /* color: green; */
+}
+
+#box {
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50px;
+  left: 20px;
+}
+
+/* #box2 p {
+  color: white;
+  font-family: monospace;
+} */
