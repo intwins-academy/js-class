@@ -1,15 +1,32 @@
-const box = document.querySelector("div");
-const inputElement = document.querySelector("input");
-const buttonElement = document.querySelector("button");
-const pElement = document.querySelector("p");
+const upButtonElement = document.querySelector("#up-button");
+const downButtonElement = document.querySelector("#down-button");
+const leftButtonElement = document.querySelector("#left-button");
+const rightButtonElement = document.querySelector("#right-button");
 
-/* buttonElement.addEventListener("click", function () {
-  pElement.style.color = inputElement.value;
-}); */
+const boxElement = document.querySelector("#box");
 
-box.addEventListener("click", function () {
-  // box.style.backgroundColor = inputElement.value;
-  // const topPostion = box.style.top.replace("px", "");
-  // console.log(getComputedStyle(box).top);
-  // box.style.top = `${parseInt(topPostion) + 20}px`;
+// Type
+
+upButtonElement.addEventListener("click", function () {
+  const position = boxElement.getBoundingClientRect();
+  boxElement.style.top = `${position.top - 10}px`;
+});
+
+downButtonElement.addEventListener("click", function () {
+  // top +
+  const postionTopCss = getComputedStyle(boxElement).top;
+  const postionTop = Number(postionTopCss.slice(0, postionTopCss.length - 2));
+  boxElement.style.top = `${postionTop + 10}px`;
+});
+
+leftButtonElement.addEventListener("click", function () {
+  // left -
+  const position = boxElement.getBoundingClientRect();
+  boxElement.style.left = `${position.left - 10}px`;
+});
+
+rightButtonElement.addEventListener("click", function () {
+  // left +
+  const postion = boxElement.getBoundingClientRect();
+  boxElement.style.left = `${postion.left + 10}px`;
 });
